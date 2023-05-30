@@ -243,9 +243,62 @@
     display: none;
  }
 
+/*Aspecto de las slides de la página principal con un background diferente*/
+ .home-bg{
+    background:url(../img/home0.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+ }
+
+.home-bg .home .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding-bottom: 6rem;
+    padding-top: 2rem;
+    user-select: none;
+ }
+
+/*Centramos la slides */
+.home-bg .home .slide .image{
+   flex:1 1 40rem;
+}
+
+.home-bg .home .slide .image img{
+   height: 40rem;
+   width: 100%;
+   object-fit: contain;
+}
+
+.home-bg .home .slide .content{
+    flex:1 1 40rem;
+ }
+ 
+ .home-bg .home .slide .content span{
+    font-size: 4rem;
+    color: var(--white);
+ }
+
+.home-bg .home .slide .content h3{
+    margin-top: 1rem;
+    font-size: 3rem;
+    color:var(--white);
+    text-transform: uppercase;
+ }
+ 
+.home-bg .home .slide .content .btn{
+    display: inline-block;
+    width: auto;
+    background-color: var(--blue);
+}
+
+/*Color de los botoncitos del slide */
+.swiper-pagination-bullet-active{
+    background-color: var(--main-color);
+ }
 
 /* Apariencia del pie de pagina presente en todo el sitio a manera de grilla empezando por los titulos y luego los items e iconos*/
-
 .footer{
     background-color: var(--white);
  }
