@@ -56,7 +56,7 @@ if(!isset($admin_id)){
      }
   }  
 };
-/*Eliminar productos del sitio y la BD*/
+/*Eliminar productos del sitio y la BD cuando sean eliminados desde panel de productos*/
 if(isset($_GET['delete'])){
 
   $delete_id = $_GET['delete'];
@@ -129,7 +129,7 @@ if(isset($_GET['delete'])){
    </form>
 
 </section>
-<!-- Productos ya añadidos y la posibilidad de eliminarlos-->
+<!-- Mostrar productos ya añadidos desd ela BD y la posibilidad de eliminarlos-->
 <section class="show-products">
 
    <h1 class="heading">Productos añadidos</h1>
@@ -148,8 +148,8 @@ if(isset($_GET['delete'])){
       <div class="price">$<span><?= $fetch_products['price']; ?></span>/-</div>
       <div class="details"><span><?= $fetch_products['details']; ?></span></div>
       <div class="flex-btn">
-         <a href="update_product.php?update=<?= $fetch_products['id']; ?>" class="option-btn">Actualizar</a>
-         <a href="products.php?delete=<?= $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('¿Eliminar producto?');">Eliminar</a>
+         <a href="ax_produc.php?update=<?= $fetch_products['id']; ?>" class="option-btn">Actualizar</a>
+         <a href="produc.php?delete=<?= $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('¿Eliminar producto?');">Eliminar</a>
       </div>
    </div>
 <!-- si no hay productos -->

@@ -1,6 +1,6 @@
 <?php
 include '../compuesto/conex.php';
-/* Redireccion a logear como admin si no tiene credenciales */
+/* Redireccion a logear como admin si no tiene credenciales, todas la paginas del panel usan la misma estructura de redireccion, solicitud a la BD, uso de font asewome, llamado del encabezado y la estructura html */
 session_start();
     $admin_id = $_SESSION['admin_id'];
     if(!isset($admin_id)){
@@ -97,7 +97,7 @@ session_start();
          $number_of_users = $select_users->rowCount()
       ?>
       <h3><?= $number_of_users; ?></h3>
-      <p>normal users</p>
+      <p>Usuarios</p>
       <a href="us_cuentas.php" class="btn">Ver usuarios</a>
    </div>
 <!-- Administradores parceros -->
@@ -119,7 +119,7 @@ session_start();
          $number_of_messages = $select_messages->rowCount()
       ?>
       <h3><?= $number_of_messages; ?></h3>
-      <p>new messages</p>
+      <p>Mensajes</p>
       <a href="mensaje.php" class="btn">PQRS</a>
    </div>
 

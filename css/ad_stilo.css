@@ -245,40 +245,40 @@ section{
     display: none;
  }
 /* Estilizar el panel de administrar o CRUD productos, usuarios... */
-.dashboard .box-container {
-    display:grid;
-    grid-template-columns: repeat (auto-fit, minmax(27rem, 1fr));
-    gap:3rem;
+.dashboard .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+    justify-content: center;
     align-items: flex-start;
-}
-.dashboard .box-container .box{
+ }
+ 
+ .dashboard .box-container .box{
+    padding:2rem;
     text-align: center;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    background-color: var(--blue);
+ }
+ 
+ .dashboard .box-container .box h3{
+    font-size: 2.7rem;
+    color:var(--black);
+ }
+ 
+ .dashboard .box-container .box h3 span{
+    font-size: 2rem;
+ }
+ 
+ .dashboard .box-container .box p{
+    padding:1.3rem;
+    border-radius: .5rem;
     background-color: var(--light-bg);
-    border: var(--border);
-    box-shadow:var(--box-shadow);
-    border-radius: .6rem;
-    text-align: center;
-    padding: 0.9rem;
-}
-
-.dashboard .box-container .box h3{
-    font-size: 3rem;
-    color: var(--black);
-}
-
-.dashboard .box-container .box h3 span{
-    font-size: 2.2rem;
-}
-
-.dashboard .box p {
-    padding: 1.54rem;
-    border-radius: .6rem;
-    background-color: var(--light-bg);
-    font-size: 1.5rem;
-    color: var(--light-color);
-    border: var(--border);
-    margin: 1rem 0;
-}
+    font-size: 1.7rem;
+    color:var(--light-color);
+    margin:1rem 0;
+ }
 
 /*Aspecto del panel de añadir un producto */
 .add-products form{
@@ -321,17 +321,17 @@ section{
     resize: none;
  }
  
- /*Presentación de los productos ya añadidos */
+ /*Presentación de los productos ya añadidos en grillas */
  .show-products .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 33rem);
+    grid-template-columns: repeat(auto-fit, 40rem);
     gap:1.5rem;
     justify-content: center;
     align-items: flex-start;
  }
  
  .show-products .box-container .box{
-    background-color: var(--white);
+    background-color: var(--blue);
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
     border:var(--border);
@@ -358,12 +358,12 @@ section{
  
  .show-products .box-container .box .details{
     font-size: 1.5rem;
-    color:var(--light-color);
+    color:var(--white);
     line-height: 2;
  }
- /*Producto siendo editado */
+ /*Apariencia del producto al ser editado */
  .update-product form{
-    background-color: var(--white);
+    background-color: teal;
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
     border:var(--border);
@@ -415,18 +415,18 @@ section{
  
  .update-product form span{
     font-size: 1.7rem;
-    color:var(--light-color);
+    color:var(--white);
  }
  
  .update-product form textarea{
     height: 15rem;
     resize: none;
  }
- 
+ /* Apariencia de los pedidos */
  .orders .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 33rem);
-    gap:1.5rem;
+    grid-template-columns: repeat(auto-fit, 50rem);
+    gap:1.2rem;
     align-items: flex-start;
     justify-content: center;
  }
@@ -454,14 +454,14 @@ section{
  .orders .box-container .select{
     margin-bottom: .5rem;
     width: 100%;
-    background-color: var(--light-bg);
+    background-color: teal;
     padding:1rem;
     font-size: 1.8rem;
     color:var(--black);
     border-radius: .5rem;
     border:var(--border);
  }
- 
+ /*Apariencia de las cuentas inscitas por usuarios y admins */
  .accounts .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, 33rem);
@@ -476,20 +476,20 @@ section{
     border-radius: .5rem;
     text-align: center;
     border:var(--border);
-    background-color: var(--white);
+    background-color: rgb(169, 218, 241);
     box-shadow: var(--box-shadow);
  }
  
  .accounts .box-container .box p{
     font-size: 2rem;
-    color:var(--light-color);
+    color:var(--black);
     margin: 1rem 0;
  }
  
  .accounts .box-container .box p span{
     color:var(--main-color);
  }
- 
+ /*Apariencia de los mensajes hechos por usuarios */
  .contacts .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, 33rem);
@@ -503,23 +503,23 @@ section{
     padding-top: 1rem;
     border-radius: .5rem;
     border:var(--border);
-    background-color: var(--white);
+    background-color:rgb(238, 200, 118);
     box-shadow: var(--box-shadow);
  }
  
  .contacts .box-container .box p{
     line-height: 1.5;
     font-size: 2rem;
-    color:var(--light-color);
+    color:var(--black);
     margin:1rem 0;
  }
  
  .contacts .box-container .box p span{
-    color:var(--main-color);
+    color:blue;
  }
  
 
-/*media queries opcionales para pantallas pequeñas, obligando un menu desplegable*/
+/*media queries opcionales para pantallas pequeñas, obligando un menu desplegable para encabezado*/
 @media (max-width: 854px) {
 
     html{

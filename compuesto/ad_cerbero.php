@@ -20,7 +20,7 @@
          <a href="../admin/dashboard.php">Inicio</a>
          <a href="../admin/produc.php">Productos</a>
          <a href="../admin/orden.php">Pedidos</a>
-         <a href="../admin/ad_cuentas">Administradores</a>
+         <a href="../admin/ad_cuentas.php">Administradores</a>
          <a href="../admin/us_cuentas.php">Usuarios</a>
          <a href="../admin/mensaje.php">Mensajes</a>
       </nav>
