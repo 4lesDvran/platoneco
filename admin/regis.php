@@ -31,7 +31,6 @@ if(isset($_POST['submit'])){
         $message[] = 'Nuevo administrador es bienvenido';
      }
   }
-
 }
 ?>
 

@@ -1,5 +1,5 @@
 <?php 
-// Aqui se establece las credenciales de acceso del administrador para la PDO 
+// Conexion con la base de datos
 $db_name = 'mysql:host=localhost;dbname=store_db';
 $user_name = 'root';
 $user_password = '';

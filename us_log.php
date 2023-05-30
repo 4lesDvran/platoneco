@@ -27,7 +27,6 @@ if(isset($_POST['submit'])){
       $message[] = 'Correo o contraseña incorrecta!';
    }
 }
-
 ?>
 
 <!-- Iniciar sesión -->

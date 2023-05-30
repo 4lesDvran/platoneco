@@ -9,6 +9,18 @@ if(isset($_SESSION['user_id'])){
    $user_id = '';
    header('location:us_log.php');
 };
+/* Si el usuario lo solicita elimina articulo de la lista de deseaos */
+if(isset($_POST['delete'])){
+   $wishlist_id = $_POST['wishlist_id'];
+   $delete_wishlist_item = $conn->prepare("DELETE FROM `wishlist` WHERE id = ?");
+   $delete_wishlist_item->execute([$wishlist_id]);
+}
+
+if(isset($_GET['delete_all'])){
+   $delete_wishlist_item = $conn->prepare("DELETE FROM `wishlist` WHERE user_id = ?");
+   $delete_wishlist_item->execute([$user_id]);
+   header('location:deseo.php');
+}
 ?>
 
 <!-- Lista de deseos -->
@@ -30,6 +42,52 @@ if(isset($_SESSION['user_id'])){
 <?php
     include 'compuesto/us_cerbero.php';
 ?>
+
+<section class="products">
+   <h3 class="heading">Tu Lista de Deseos</h3>
+   <div class="box-container">
+<!-- Precio total de los articulos sumando sus valores individuales-->
+   <?php
+      $grand_total = 0;
+      $select_wishlist = $conn->prepare("SELECT * FROM `wishlist` WHERE user_id = ?");
+      $select_wishlist->execute([$user_id]);
+      if($select_wishlist->rowCount() > 0){
+         while($fetch_wishlist = $select_wishlist->fetch(PDO::FETCH_ASSOC)){
+            $grand_total += $fetch_wishlist['price'];  
+   ?>
+<!-- Referencia lo la DB el arreglo de la lista de deseos para añadirlas o eliminarlos-->
+   <form action="" method="post" class="box">
+      <input type="hidden" name="pid" value="<?= $fetch_wishlist['pid']; ?>">
+      <input type="hidden" name="wishlist_id" value="<?= $fetch_wishlist['id']; ?>">
+      <input type="hidden" name="name" value="<?= $fetch_wishlist['name']; ?>">
+      <input type="hidden" name="price" value="<?= $fetch_wishlist['price']; ?>">
+      <input type="hidden" name="image" value="<?= $fetch_wishlist['image']; ?>">
+   <!-- Esto referencia de manera local las imagenes y el metodo de vista rápida para todos los articulos -->
+      <a href="vista.php?pid=<?= $fetch_wishlist['pid']; ?>" class="fas fa-eye"></a>
+      <img src="subir_img/<?= $fetch_wishlist['image']; ?>" alt="">
+      <div class="name"><?= $fetch_wishlist['name']; ?></div>
+      <div class="flex">
+         <div class="price">$<?= $fetch_wishlist['price']; ?>/-</div>
+         <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
+      </div>
+      <input type="submit" value="Añadir al carro" class="btn" name="add_to_cart">
+      <input type="submit" value="Quitar artículo" onclick="return confirm('¿Desea quitar este artículo?');" class="delete-btn" name="delete">
+   </form>
+<!-- Lista de deseos vacía --> 
+   <?php
+      }
+   }else{
+      echo '<p class="empty">No tienes artículos deseados</p>';
+   }
+   ?>
+   </div>
+<!-- Opciones de volver a la tienda os deshacer el carrito -->
+   <div class="wishlist-total">
+      <p>Total : <span>$<?= $grand_total; ?>/-</span></p>
+      <a href="shop.php" class="option-btn">Continuar comprando</a>
+      <a href="deseo.php?delete_all" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>" onclick="return confirm('¿Desea quitar todos los artículo?');"> Quitar todos los artículos</a>
+   </div>
+</section>
 
 <!-- incluye pie de pagina y js script corresponidente--> 
 <?php

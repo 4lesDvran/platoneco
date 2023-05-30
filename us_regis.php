@@ -38,6 +38,7 @@ if(isset($_POST['submit'])){
    }
 }
 ?>
+
 <!-- Registrar usuario -->
 <!DOCTYPE html>
 <html lang="es">

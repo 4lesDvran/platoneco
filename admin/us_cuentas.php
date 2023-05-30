@@ -66,9 +66,7 @@ if(!isset($admin_id)){
          echo '<p class="empty">Estamos en banca rota</p>';
       }
    ?>
-
    </div>
-
 </section>
 
 <!-- incluye js script corresponidente --> 

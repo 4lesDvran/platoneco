@@ -79,13 +79,11 @@ if(!isset($admin_id)){
         $message[] = 'La tercera imagen se actualizo con exito';
      }
   }
-
 }
-
 ?>
 
+<!-- Esctrucutra de como actualizar los parametros de un producto-->
 <!doctype html>
-
 <html lang="es">
   <head>
     <meta charset="utf-8">
@@ -99,9 +97,8 @@ if(!isset($admin_id)){
 
 <?php include '../compuesto/ad_cerbero.php'; 
   ?>
-<!-- Esctrucutra de como actualizar los parametros de un producto-->
-<section class="update-product">
 
+<section class="update-product">
    <h1 class="heading">Actualizar Producto</h1>
 <!-- Encontrar producto en la BD -->
    <?php

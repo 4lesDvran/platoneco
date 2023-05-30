@@ -6,7 +6,7 @@ $admin_id = $_SESSION['admin_id'];
 if(!isset($admin_id)){
     header('location:ad_log.php');
  }
-/*Aqui es el CRUD de productos por parte de u nadmin, se empieza por subir a la BD las imagenes subidas desde la carpeta correspondiente, un maximo de 3 con su nombre, precio y detalle*/
+/*Aqui es el CRUD de productos por parte de un admin, se empieza por subir a la BD las imagenes subidas desde la carpeta correspondiente, un maximo de 3 con su nombre, precio y detalle*/
  if(isset($_POST['add_product'])){
 
   $name = $_POST['name'];
@@ -74,9 +74,9 @@ if(isset($_GET['delete'])){
   $delete_wishlist->execute([$delete_id]);
   header('location:produc.php');
 }
-
 ?>
 
+<!-- Estructura del CRUD por parte del admin desde el Panel de Administrador-->
 <!doctype html>
 <html lang="es">
   <head>
@@ -92,7 +92,6 @@ if(isset($_GET['delete'])){
   <?php include '../compuesto/ad_cerbero.php'; 
   ?>
 
-<!-- Estructura del CRUD por parte del admin desde el Panel de Administrador-->
 <section class="add-products">
 
    <h1 class="heading">Añadir producto</h1>
@@ -159,9 +158,8 @@ if(isset($_GET['delete'])){
          echo '<p class="empty">No se han añadido productos</p>';
       }
    ?>
-   
-   </div>
 
+   </div>
 </section>
 
 <!-- incluye js script corresponidente --> 

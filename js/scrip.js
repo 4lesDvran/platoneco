@@ -1,4 +1,4 @@
-//Desplegar paneles de admin-cerbero cuando se hace click en el icono
+//Desplegar paneles del encabezado us-cerbero cuando se hace click en el icono
 let profile = document.querySelector('.header .flex .profile');
 document.querySelector('#user-btn').onclick = () => {
     profile.classList.toggle('active');

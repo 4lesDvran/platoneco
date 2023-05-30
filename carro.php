@@ -9,7 +9,7 @@ if(isset($_SESSION['user_id'])){
    $user_id = '';
    header('location:us_log.php');
 };
-/*Editar el carro para eliminar o catualizarlo */
+/*Editar el carro para eliminar o catualizarlo y refrescar la pagina con la accion */
 if(isset($_POST['delete'])){
    $cart_id = $_POST['cart_id'];
    $delete_cart_item = $conn->prepare("DELETE FROM `cart` WHERE id = ?");
@@ -18,7 +18,7 @@ if(isset($_POST['delete'])){
 if(isset($_GET['delete_all'])){
    $delete_cart_item = $conn->prepare("DELETE FROM `cart` WHERE user_id = ?");
    $delete_cart_item->execute([$user_id]);
-   header('location:cart.php');
+   header('location:carro.php');
 }
 if(isset($_POST['update_qty'])){
    $cart_id = $_POST['cart_id'];
@@ -26,9 +26,8 @@ if(isset($_POST['update_qty'])){
    $qty = filter_var($qty, FILTER_SANITIZE_STRING);
    $update_qty = $conn->prepare("UPDATE `cart` SET quantity = ? WHERE id = ?");
    $update_qty->execute([$qty, $cart_id]);
-   $message[] = 'cart quantity updated';
+   $message[] = 'Cantidad actualizada';
 }
-
 ?>
 
 <!-- Carro -->
@@ -53,7 +52,7 @@ if(isset($_POST['update_qty'])){
 <!-- Carro de compras, botones para eliminar y modificar las compras en curso -->
 <section class="products shopping-cart">
 
-<h3 class="heading">shopping cart</h3>
+<h3 class="heading">Tu Carrito</h3>
 
 <div class="box-container">
 
@@ -87,7 +86,7 @@ $grand_total += $sub_total;
    echo '<p class="empty">Tu carro está vacío';
 }
 ?>
-
+<!-- Los botones de eliminar y proceder no tienen función si no hay articulos -->
 </div>
 <div class="cart-total">
    <p>Total de compras : <span>$<?= $grand_total; ?>/-</span></p>

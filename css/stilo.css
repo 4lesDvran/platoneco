@@ -1,5 +1,5 @@
-/*Aqui esta el estilo de la aparencia para navegar como usurio, se importa una font de google Roboto Mono */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,400;1,100&display=swap');
+/*Aqui esta el estilo de la aparencia para navegar como usurio, se importa una font de google mas sueve y agradable, la Prompt  */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,300;0,500;1,100&display=swap');
 
 /*definir colores que se usan */
 :root{
@@ -17,7 +17,7 @@
 
 /*usar la font que se importo */
 *{
-    font-family: 'Roboto Mono', monospace;
+   font-family: 'Prompt', sans-serif;;
     margin: 0; padding:0;
     box-sizing: border-box;
     text-decoration: none;
@@ -247,9 +247,15 @@
 }
  
 /*Se oculta el icono de menu en pantallas grandes */
- #menu-btn{
+#menu-btn{
     display: none;
  }
+
+.disabled {
+   user-select: none;
+   pointer-events: none;
+   opacity: 5;
+}
 
 /*Aspecto de las slides de la página principal con un background diferente*/
 
@@ -346,7 +352,6 @@
  }
 
 /*Apariencia de los ultimos productos en venta, empezando por organizar y centrar dichos productos*/
-
 .home-products .slide{
     position: relative;
     padding:2rem;
@@ -559,11 +564,67 @@
 .products .box .btn {
     background-color: orange;
 }
+.products .box .delete-btn {
+   background-color: var(--main-color);
+}
+
+/* Apariencia del texto de total en la lista de deseos */
+.wishlist-total{
+   max-width: 50rem;
+   margin:0 auto;
+   margin-top: 3rem;
+   background-color: var(--white);
+   border:var(--border);
+   border-radius: .5rem;;
+   padding:2rem;
+   text-align: center;
+}
+
+.wishlist-total p{
+   font-size: 2.5rem;
+   color:var(--black);
+   margin-bottom: 2rem;
+}
+
+.wishlist-total p span{
+   color:var(--red);
+}
+.wishlist-total .delete-btn {
+   background-color: var(--main-color);
+}
+/*Apariencia de la página del carro */
+.cart-total{
+   max-width: 50rem;
+   margin:0 auto;
+   margin-top: 3rem;
+   background-color: var(--white);
+   border:var(--border);
+   border-radius: .5rem;;
+   padding:2rem;
+   text-align: center;
+}
+
+.cart-total p{
+   font-size: 2.5rem;
+   color:var(--black);
+   margin-bottom: 2rem;
+}
+
+.cart-total p span{
+   color:var(--red);
+}
+.cart-total .delete-btn {
+   background-color: var(--main-color);
+}
+.cart-total .btn {
+   background-color: green;
+}
+
 /*Apariencia de la vista rapida de un producto X */
 .quick-view form{
     padding:2rem;
     border-radius: .5rem;
-    border:var(--border);
+    border:var(--black);
     background-color: var(--white);
     box-shadow: var(--box-shadow);
     margin-top: 1rem;
@@ -688,6 +749,65 @@
     background-color: green;
  }
 
+/*Apareincia del contactenos */
+.contact form{
+   padding:2rem;
+   text-align: center;
+   background-color: rgb(245, 215, 84);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+   border:var(--border);
+   max-width: 50rem;
+   margin:0 auto;
+}
+
+.contact form h3{
+   margin-bottom: 1rem;
+   text-transform: capitalize;
+   font-size: 2.5rem;
+   color:var(--black);
+}
+
+.contact form .box{
+    margin:1rem 0;
+    width: 100%;
+    background-color: var(--light-bg);
+    padding:1.4rem;
+    font-size: 1.8rem;
+    color:var(--black);
+    border-radius: .5rem;
+ }
+ 
+.contact form textarea{
+    height: 15rem;
+    resize: none;
+ } 
+.contact .btn {
+    background-color: green;
+}
+/*Apariencia de la busqueda de productos, empezando por lso colores de el cuadro de bus y caracteristicas de escritura*/
+.search-form form{
+   display: flex;
+   gap:1rem;
+}
+.search-form form .box{
+   width: 100%;
+   border:var(--border);
+   border-radius: .5rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   padding:1.4rem;
+   font-size: 1.8rem;
+   color:var(--black);
+}
+.search-form form .fa-search{
+   width: 5rem;
+   font-size: 2.5rem;
+   background-color: var(--main-color);
+   color: var(--white);
+   border-radius: 0.5rem;
+   cursor: pointer;
+}
 /* Apariencia del pie de pagina presente en todo el sitio a manera de grilla empezando por los titulos y luego los items e iconos*/
 .footer{
     background-color: var(--white);
@@ -735,6 +855,89 @@
  .footer .credit span{
     color:var(--main-color);
  }
+/* Apariencia de la página de los pedidos */
+.checkout-orders form{
+   padding:2rem;
+   border:var(--border);
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+}
+
+.checkout-orders form h3{
+   border-radius: .5rem;
+   background-color: var(--black);
+   color:var(--white);
+   padding:1.5rem 1rem;
+   text-align: center;
+   text-transform: uppercase;
+   margin-bottom: 2rem;
+   font-size: 2.5rem;
+}
+.checkout-orders form .flex{
+   display: flex;
+   flex-wrap: wrap;
+   gap:1.5rem;
+   justify-content: space-between;
+}
+
+.checkout-orders form .flex .inputBox{
+   width: 49%;
+}
+
+.checkout-orders form .flex .inputBox .box{
+   width: 100%;
+   border:var(--border);
+   border-radius: .5rem;
+   font-size: 1.8rem;
+   color:var(--black);
+   padding:1.2rem 1.4rem;
+   margin:1rem 0;
+   background-color: gray;
+}
+.checkout-orders form .flex .inputBox span{
+   font-size: 1.8rem;
+   color:var(--light-color);
+}
+
+.checkout-orders form .btn{
+   background-color: var(--blue);
+}
+/*Apariencia de la infor del pedido en check o caja */
+.checkout-orders form .display-orders {
+   font-size: 3rem;
+   justify-content: center;
+   padding: 2rem;
+}
+
+/*Apariencia de los pedidos realizados por los usuarios */
+.orders .box-container{
+   display: flex;
+   flex-wrap: wrap;
+   gap:1.5rem;
+   align-items: flex-start;
+}
+
+.orders .box-container .box{
+   padding:1rem 2rem;
+   flex:1 1 40rem;
+   border:var(--border);
+   background-color: var(--light-bg);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+}
+
+.orders .box-container .box p{
+   margin:.5rem 0;
+   line-height: 1.8;
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.orders .box-container .box p span{
+   color:var(--blue);
+}
+
 
 /*media queries opcionales para pantallas pequeñas, obligando un menu desplegable para encabezado*/
 @media (max-width: 854px) {
@@ -787,4 +990,11 @@
         flex-flow: column;
         gap:0;
      }
+     .quick-view form .row .image-container .sub-image img{
+      width: 8rem;
+   }
+
+   .checkout-orders form .flex .inputBox{
+      width: 100%;
+   }
 }

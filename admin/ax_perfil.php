@@ -43,7 +43,7 @@ if(isset($_POST['submit'])){
   }
 }
 ?>
-
+<!-- Actualizar credenciales del administrador -->
 <!doctype html>
 <html lang="es">
   <head>
