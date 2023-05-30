@@ -57,7 +57,7 @@
             <a href="us_log.php" class="option-btn">Iniciar sesión</a>
             <a href="us_regis.php" class="option-btn">Registrar</a>
          </div>
-         <a href="compuestos/us_sal.php" class="delete-btn" onclick="return confirm('¿Cerrar sesión?');">Salir</a> 
+         <a href="compuesto/us_sal.php" class="delete-btn" onclick="return confirm('¿Cerrar sesión?');">Salir</a> 
          <?php
             }else{
          ?>

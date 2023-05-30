@@ -237,6 +237,14 @@
     font-size: 2rem;
     margin-bottom: 1rem;
 }
+/*Colores del botones hover sobre las opciones de usuario */
+.header .flex .profile .btn{
+    background-color: orange;
+}
+
+.header .flex .profile .delete-btn{
+    background-color: var(--main-color);
+}
  
 /*Se oculta el icono de menu en pantallas grandes */
  #menu-btn{
@@ -244,13 +252,14 @@
  }
 
 /*Aspecto de las slides de la página principal con un background diferente*/
- .home-bg{
+
+.home-bg{
     background:url(../img/home0.jpg) no-repeat;
     background-size: cover;
     background-position: center;
  }
-
-.home-bg .home .slide{
+ 
+ .home-bg .home .slide{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -259,43 +268,424 @@
     padding-top: 2rem;
     user-select: none;
  }
-
-/*Centramos la slides */
-.home-bg .home .slide .image{
-   flex:1 1 40rem;
-}
-
-.home-bg .home .slide .image img{
-   height: 40rem;
-   width: 100%;
-   object-fit: contain;
-}
-
-.home-bg .home .slide .content{
+ 
+ .home-bg .home .slide .image{
     flex:1 1 40rem;
  }
  
- .home-bg .home .slide .content span{
-    font-size: 4rem;
-    color: var(--white);
+ .home-bg .home .slide .image img{
+    height: 40rem;
+    width: 100%;
+    object-fit: contain;
  }
-
-.home-bg .home .slide .content h3{
+ 
+ .home-bg .home .slide .content{
+    flex:1 1 40rem;
+ }
+ /*Centrado u color del texto */
+ .home-bg .home .slide .content span{
+    font-size: 2rem;
+    color:var(--white);
+ }
+ 
+ .home-bg .home .slide .content h3{
     margin-top: 1rem;
-    font-size: 3rem;
+    font-size: 4rem;
     color:var(--white);
     text-transform: uppercase;
  }
  
-.home-bg .home .slide .content .btn{
+ .home-bg .home .slide .content .btn{
     display: inline-block;
     width: auto;
     background-color: var(--blue);
-}
+ }
+ 
 
 /*Color de los botoncitos del slide */
 .swiper-pagination-bullet-active{
     background-color: var(--main-color);
+ }
+
+ /*Apariendcia del slide de las categorias en la página principal empezando por su centrado y hover oscuro*/
+ .category .slide{
+    margin-bottom: 5rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    text-align: center;
+    padding:2rem;
+    background: var(--white);
+    border-radius: .5rem;
+ }
+ 
+ .category .slide:hover{
+    background-color: var(--black);
+ }
+
+/* Ajustar tamaño y navegación de las imagenes */
+ .category .slide:hover img{
+    filter:invert();
+ }
+ 
+ .category .slide:hover h3{
+    color:var(--white);
+ }
+ 
+ .category .slide img{
+    height: 7rem;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    user-select: none;
+ }
+ 
+ .category .slide h3{
+    font-size: 2rem;
+    color:var(--black);
+    user-select: none;
+ }
+
+/*Apariencia de los ultimos productos en venta, empezando por organizar y centrar dichos productos*/
+
+.home-products .slide{
+    position: relative;
+    padding:2rem;
+    border-radius: .5rem;
+    border:var(--border);
+    background-color: var(--blue);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 5rem;
+    overflow: hidden;
+    user-select: none;
+ }
+ 
+ .home-products .slide img{
+    width: 100%;
+    height: 20rem;
+    object-fit: contain;
+    margin-bottom: 2rem;
+ }
+
+ .home-products .slide .name{
+    font-size: 2rem;
+    color:var(--white);
+ }
+/* Incrementar tamaño para llamar la atención */
+ .home-products .slide .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:1rem;
+ }
+ .home-products .slide .flex .qty{
+    width: 7rem;
+    padding:1rem;
+    border:var(--border);
+    font-size: 1.8rem;
+    color:var(--black);
+    border-radius: .5rem;
+ }
+
+.home-products .slide .flex .price{
+    margin:1rem 0;
+    font-size: 2rem;
+    color:var(--red);
+ }
+ .home-products .slide .btn {
+    background-color: orange;
+ }
+
+/*El añadir a deseos y vista rapida se oculta con un hover */ 
+ .home-products .slide .fa-heart,
+ .home-products .slide .fa-eye{
+    position: absolute;
+    top:1rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.2rem;
+    font-size: 2rem;
+    background-color: var(--white);
+    border:var(--border);
+    border-radius: .5rem;
+    text-align: center;
+    color:var(--black);
+    cursor: pointer;
+    transition: .2s linear;
+ }
+ 
+ .home-products .slide .fa-heart{
+    right: -6rem;
+ }
+ 
+ .home-products .slide .fa-eye{
+    left: -6rem;
+ }
+ .home-products .slide .fa-heart:hover,
+.home-products .slide .fa-eye:hover{
+   background-color: var(--black);
+   color:var(--white);
+}
+
+.home-products .slide:hover .fa-heart{
+   right: 1rem;
+}
+
+.home-products .slide:hover .fa-eye{
+   left: 1rem;
+}
+/*Apariencia del acceso a usuario, registro y otros botones, como siempre se centra el contenido */
+.form-container form{
+    background-color: var(--blue);
+    padding:2rem;
+    border-radius: .5rem;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    margin:0 auto;
+    max-width: 50rem;
+ }
+ 
+ .form-container form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color:var(--black);
+ }
+ .form-container form p{
+    font-size: 2rem;
+    color:var(--white);
+    margin:1.5rem 0;
+ }
+
+ .form-container .btn{
+    background-color: orange;
+ }
+
+ .form-container form .box{
+    margin:1rem 0;
+    background-color: var(--light-bg);
+    padding:1.4rem;
+    font-size: 1.8rem;
+    color:var(--black);  
+    width: 100%;
+    border-radius: .5rem;
+ }
+/*Apariencia de los items en categorias, centrar , enfocar, redimensionar y llamar la atención */
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap:1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+ }
+ 
+ .products .box-container .box{
+    position: relative;
+    background-color: var(--blue);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    border:var(--border);
+    padding:2rem;
+    overflow: hidden;
+ }
+ .products .box-container .box img{
+    height: 20rem;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+ }
+ /*Uso de iconos de vista rapida y deseos */
+ .products .box-container .box .fa-heart,
+ .products .box-container .box .fa-eye{
+    position: absolute;
+    top:1rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.2rem;
+    font-size: 2rem;
+    background-color: var(--white);
+    border:var(--border);
+    border-radius: .5rem;
+    text-align: center;
+    color:var(--black);
+    cursor: pointer;
+    transition: .2s linear;
+ }
+ /*Uso de un hover para ocultar deso y vista rápida */
+ .products .box-container .box .fa-heart{
+    right: -6rem;
+ }
+ 
+ .products .box-container .box .fa-eye{
+    left: -6rem;
+ }
+ 
+ .products .box-container .box .fa-heart:hover,
+ .products .box-container .box .fa-eye:hover{
+    background-color: var(--black);
+    color:var(--white);
+ }
+ .products .box-container .box:hover .fa-heart{
+    right:1rem;
+ }
+ 
+ .products .box-container .box:hover .fa-eye{
+    left:1rem;
+ }
+ /*Aumentar tamaño del texto y recolorear el botón */
+ .products .box-container .box .name{
+    font-size: 2rem;
+    color:var(--white);
+ }
+ 
+.products .box-container .box .flex{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+ } 
+.products .box-container .box .flex .qty{
+    width: 7rem;
+    padding:1rem;
+    border:var(--border);
+    font-size: 1.8rem;
+    color:var(--black);
+    border-radius: .5rem;
+ }
+ 
+.products .box-container .box .flex .price{
+    font-size: 2rem;
+    color:var(--black);
+    margin-right: auto;
+ }
+.products .box .btn {
+    background-color: orange;
+}
+/*Apariencia de la vista rapida de un producto X */
+.quick-view form{
+    padding:2rem;
+    border-radius: .5rem;
+    border:var(--border);
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    margin-top: 1rem;
+ }
+ 
+ .quick-view form .row{
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+    flex-wrap: wrap;
+ }
+ .quick-view form .row .image-container{
+    margin-bottom: 2rem;
+    flex:1 1 40rem;
+ }
+ /*Organiza las imagenes para visualizar una por una*/
+ .quick-view form .row .image-container .main-image img{
+    height: 30rem;
+    width: 100%;
+    object-fit: contain;
+ }
+ .quick-view form .row .image-container .sub-image{
+    display: flex;
+    gap:1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+ }
+ 
+ .quick-view form .row .image-container .sub-image img{
+    height: 7rem;
+    width: 10rem;
+    object-fit: contain;
+    padding:.5rem;
+    border:var(--border);
+    cursor: pointer;
+    transition: .2s linear;
+ }
+ 
+ .quick-view form .flex .image-container .sub-image img:hover{
+    transform: scale(1.1);
+ }
+ .quick-view form img{
+    width: 100%;
+    height: 20rem;
+    object-fit: contain;
+    margin-bottom: 2rem;
+ }
+ 
+ .quick-view form .row .content{
+    flex:1 1 40rem;
+ }
+ 
+ .quick-view form .row .content .name{
+    font-size: 2rem;
+    color:var(--black);
+ }
+ 
+.quick-view form .row .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:1rem;
+    margin:1rem 0;
+ }
+
+.quick-view form .row .flex .qty{
+    width: 7rem;
+    padding:1rem;
+    border:var(--border);
+    font-size: 1.8rem;
+    color:var(--black);
+    border-radius: .5rem;
+ }
+ 
+.quick-view form .row .flex .price{
+    font-size: 2rem;
+    color:var(--red);
+ }
+ 
+.quick-view form .row .content .details{
+    font-size: 1.6rem;
+    color:var(--light-color);
+    line-height: 2;
+ }  
+/*Color del boton solo Dios sabe donde esta la linea que lo hecho a perder */
+.quick-view .btn {
+    background-color: orange;
+}
+/*Apariencia del acerca de, empezando por dar espacio del texto e imagen*/
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+ }
+.about .row .image{
+    flex:1 1 40rem;
+ }
+/*Ahora se trabaja con la fuente del contenido, poniendola a un lado */
+.about .row .image img{
+    width: 100%;
+ }
+ 
+.about .row .content{
+    flex:1 1 40rem;
+ }
+ 
+.about .row .content h3{
+    font-size: 3rem;
+    color:var(--black);
+ }
+.about .row .content p{
+    line-height: 2;
+    font-size: 1.5rem;
+    color:var(--light-color);
+    padding:1rem 0;
+ }
+ 
+.about .row .content .btn{
+    display: inline-block;
+    width: auto;
+    background-color: green;
  }
 
 /* Apariencia del pie de pagina presente en todo el sitio a manera de grilla empezando por los titulos y luego los items e iconos*/
@@ -358,9 +748,7 @@
   
      .header .flex .navbar{
         position: absolute;
-        top:99%; 
-        left:0; 
-        right:0;
+        top:99%; left:0; right:0;
         border-top: var(--border);
         border-bottom: var(--border);
         background-color: var(--white);
@@ -377,7 +765,15 @@
         margin:2rem;
      }
   
-}
+     .home-bg .home .slide .content{
+        text-align: center;
+     }
+  
+     .home-bg .home .slide .content h3{
+        font-size: 3rem;
+     }
+  
+  }
 
 @media (max-width: 640px) {
 
