@@ -1,0 +1,341 @@
+/*Aqui esta el estilo de la aparencia para navegar como usurio, se importa una font de google Roboto Mono */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,400;1,100&display=swap');
+
+/*definir colores que se usan */
+:root{
+    --main-color:#e74c3c;
+    --blue: #0c81cf;
+    --green: #00ff00;
+    --black: #050505;
+    --yellow: rgb(227, 245, 123);
+    --white: #ffffff;
+    --light-bg:#e9e6e6;
+    --light-color:#575656;
+    --border:.rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba (0,0,0,.1);
+}
+
+/*usar la font que se importo */
+*{
+    font-family: 'Roboto Mono', monospace;
+    margin: 0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    color: var(--black)
+}
+
+/*Color de seleccion fondo */
+*::selection{
+    background-color: var(--main-color);
+    color:var(--white);
+ }
+ /*Color de las barras de desplazamiento */
+ ::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+ }
+ 
+ ::-webkit-scrollbar-track{
+    background-color: transparent;
+ }
+ 
+ ::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+ }
+ /*Fuente principal y color de fondo, modo pastel como todo ecommerce */
+ html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+ }
+ 
+ body{
+    background-color: var(--yellow);
+ }
+ 
+ section{
+    padding:2rem;
+    max-width: 1200px;
+    margin:0 auto;
+ }
+
+ .heading{
+    font-size: 4rem;
+    color:var(--black);
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+ }
+
+/*Apariencia de los botones */
+ .btn,
+ .delete-btn,
+ .option-btn{
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    padding:1rem 2rem;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    color:var(--white);
+    cursor: pointer;
+    text-align: center;
+ }
+ .btn:hover,
+ .delete-btn:hover,
+ .option-btn:hover{
+    background-color: var(--green);
+    color: var(--black);
+ }
+ 
+ .btn{
+    background-color: var(--orange);
+ }
+ 
+ .option-btn{
+    background-color: orange;
+ }
+ 
+ .delete-btn{
+    background-color: var(--red);
+ }
+ 
+ .flex-btn{
+    display: flex;
+    gap:1rem;
+ }
+
+/* Apariencia de los mensajes de error */
+.message{
+   position: sticky;
+   top:0;
+   max-width: 1200px;
+   margin:0 auto;
+   background-color: var(--light-bg);
+   padding:2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:1.5rem;
+   z-index: 1100;
+}
+
+.message span{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.message i{
+   cursor: pointer;
+   color:var(--red);
+   font-size: 2.5rem;
+}
+
+.message i:hover{
+   color:var(--black);
+}
+
+.empty{
+   padding:1.5rem;
+   background-color: var(--white);
+   border: var(--border);
+   box-shadow: var(--box-shadow);
+   text-align: center;
+   color:var(--red);
+   border-radius: .5rem;
+   font-size: 2rem;
+   text-transform: capitalize;
+}
+
+.disabled{
+   pointer-events: none;
+   user-select: none;
+   opacity: .5;
+}
+
+@keyframes fadeIn{
+   0%{
+      transform: translateY(1rem);
+   }
+}
+/*Apariencia del encabezado cerbero incluye logo, iconos, barra de navegacion y titlos de acceso */
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    background-color: rgb(198, 236, 154);
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+}
+
+.header .flex .logo {
+    font-size: 2.5rem;
+    color: rgb(8, 100, 8);
+} 
+.header .flex .logo span {
+    font-size: 2.5rem;
+    color:rgba(48, 14, 14, 0.616);
+}
+
+.header .flex .navbar a{
+    margin:0 1rem;
+    font-size: 2rem;
+    color:var(--black);
+ }
+ 
+ .header .flex .navbar a:hover{
+    color:var(--main-color);
+    text-decoration: underline;
+ }
+ 
+/* Iconos de menu y usuario */
+.header .flex .icons > *{
+    margin-left: 1rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color:var(--black);
+ }
+ 
+ .header .flex .icons > *:hover{
+    color:var(--main-color);
+ }
+ 
+ .header .flex .icons a span{
+    color: var(--black);
+    font-size: 2rem;
+ }
+
+ .header .flex .profile{
+    position: absolute;
+    top:120%; right:2rem;
+    background-color: var(--white);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    padding:2rem;
+    width: 30rem;
+    padding-top: 1.2rem;
+    display: none;
+    animation:fadeIn .2s linear;
+ }
+ 
+ .header .flex .profile.active{
+    display: inline-block;
+ }
+ 
+ .header .flex .profile p{
+    text-align: center;
+    color:var(--black);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+ 
+/*Se oculta el icono de menu en pantallas grandes */
+ #menu-btn{
+    display: none;
+ }
+
+
+/* Apariencia del pie de pagina presente en todo el sitio a manera de grilla empezando por los titulos y luego los items e iconos*/
+
+.footer{
+    background-color: var(--white);
+ }
+ 
+ .footer .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap:1.5rem;
+    align-items: flex-start;
+ }
+
+ .footer .grid .box h3{
+    font-size: 1.7rem;
+    color:var(--black);
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+ }
+.footer .grid .box a{
+    display: block;
+    margin:1.5rem 0;
+    font-size: 1.7rem;
+    color:var(--light-color);
+ }
+/*Se añaden efectos de animacion a los items de la grilla */
+.footer .grid .box a i{
+    padding-right: 1rem;
+    color:var(--main-color);
+    transition: .2s linear;
+ }
+.footer .grid .box a:hover{
+    color:var(--blue);
+ }
+.footer .grid .box a:hover i{
+    padding-right: 2rem;
+ } 
+/*Se termina con los creditos */
+ .footer .credit{
+    text-align: center;
+    padding: 2.5rem 2rem;
+    border-top: var(--border);
+    font-size: 2rem;
+    color:var(--black);
+ }
+ .footer .credit span{
+    color:var(--main-color);
+ }
+
+/*media queries opcionales para pantallas pequeñas, obligando un menu desplegable para encabezado*/
+@media (max-width: 854px) {
+
+    html{
+        font-size: 65%;
+    }
+    #menu-btn{
+        display: inline-block;
+     }
+  
+     .header .flex .navbar{
+        position: absolute;
+        top:99%; 
+        left:0; 
+        right:0;
+        border-top: var(--border);
+        border-bottom: var(--border);
+        background-color: var(--white);
+        transition: .2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+     }
+  
+     .header .flex .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+     }
+  
+     .header .flex .navbar a{
+        display: block;
+        margin:2rem;
+     }
+  
+}
+
+@media (max-width: 640px) {
+
+    html{
+        font-size: 55%;
+    }
+    .heading {
+        font-size: 2.5rem;
+    }
+    .flex-btn{
+        flex-flow: column;
+        gap:0;
+     }
+}

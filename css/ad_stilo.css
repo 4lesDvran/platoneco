@@ -157,7 +157,7 @@ section{
     background-color: green;
 }
 
-/*Apariencia del encabezado cerbero incluye iconos, barra de navegacion y titlos de acceso*/
+/*Apariencia del encabezado cerbero incluye iconos, barra de navegacion y titulos de acceso*/
 
 .header .flex {
     display: flex;
@@ -175,10 +175,11 @@ section{
 }
 
 .header .flex .logo {
-    font-size: 6 rem;
+    font-size: 3.5rem;
     color: blue;
 } 
 .header .flex .logo span {
+   font-size: 3.5rem;
     color:var(--black);
 }
 
