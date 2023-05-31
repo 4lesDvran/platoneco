@@ -52,7 +52,7 @@ if(isset($_POST['submit'])){
 <section class="form-container">
    <form action="" method="post">
       <h3>Inicie sesión</h3>
-      <input type="email" name="email" required placeholder="Introduzca su emai" maxlength="50"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="email" name="email" required placeholder="Introduzca su email" maxlength="50"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="pass" required placeholder="Introduzca su contraseña" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="submit" value="Acceder" class="btn" name="submit">
 <!-- Si no tiene cuenta le da la opción de ir al registro -->

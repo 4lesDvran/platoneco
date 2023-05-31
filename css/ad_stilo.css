@@ -10,7 +10,7 @@
     --white: #ffffff;
     --light-bg:#e9e6e6;
     --light-color:#575656;
-    --border:.rem solid var(--black);
+    --border:.2rem solid var(--white);
     --box-shadow:0 .5rem 1rem rgba (0,0,0,.1);
 }
 

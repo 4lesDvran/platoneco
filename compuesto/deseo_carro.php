@@ -4,7 +4,7 @@ if(isset($_POST['add_to_wishlist'])){
    if($user_id == ''){
       header('location:us_log.php');
    }else{
-/*Este es el editor del carrito y lista de deseos, se empieza solicitando a la DB la lista de deseos para comprobar si lo que se va a añadir ya esta */
+/*Este es la referneica para editar del carrito y lista de deseos, se empieza solicitando a la DB la lista de deseos para comprobar si lo que se va a añadir ya esta */
       $pid = $_POST['pid'];
       $pid = filter_var($pid, FILTER_SANITIZE_STRING);
       $name = $_POST['name'];

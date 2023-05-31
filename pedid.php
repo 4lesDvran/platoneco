@@ -38,7 +38,7 @@ if(isset($_SESSION['user_id'])){
 <!-- despliega los pedidos desde la Db al usuario correspondiente -->
    <?php
       if($user_id == ''){
-         echo '<p class="empty">Inicia sesón para ver tus pedidos</p>';
+         echo '<p class="empty">Inicia sesión para ver tus pedidos</p>';
       }else{
          $select_orders = $conn->prepare("SELECT * FROM `orders` WHERE user_id = ?");
          $select_orders->execute([$user_id]);

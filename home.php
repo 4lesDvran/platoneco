@@ -51,7 +51,7 @@ include 'compuesto/deseo_carro.php';
 
       <div class="swiper-slide slide">
          <div class="image">
-            <img src="img/home2.jpg" alt="">
+            <img src="img/home.jpg" alt="">
          </div>
          <div class="content">
             <span>Sembrando un mejor futuro</span>

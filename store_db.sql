@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `shop_db`
+-- Database: `store_db`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admins`
+-- Estructura para la tabla de los `admins`
 --
 
 CREATE TABLE `admins` (
@@ -34,7 +34,7 @@ CREATE TABLE `admins` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `admins`
+-- Intorducir info en `admins`
 --
 
 INSERT INTO `admins` (`id`, `name`, `password`) VALUES
@@ -43,7 +43,7 @@ INSERT INTO `admins` (`id`, `name`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart`
+-- Estructura para la tabla del carrito `cart`
 --
 
 CREATE TABLE `cart` (
@@ -59,7 +59,7 @@ CREATE TABLE `cart` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `messages`
+-- Estructura para la tabla de los `messages`
 --
 
 CREATE TABLE `messages` (
@@ -74,7 +74,7 @@ CREATE TABLE `messages` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Estructura para la tabla de los pedidos `orders`
 --
 
 CREATE TABLE `orders` (
@@ -94,7 +94,7 @@ CREATE TABLE `orders` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Estructura para la tabla de los `products`
 --
 
 CREATE TABLE `products` (
@@ -110,7 +110,7 @@ CREATE TABLE `products` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Estructura para la tabla de los `users`
 --
 
 CREATE TABLE `users` (
@@ -123,7 +123,7 @@ CREATE TABLE `users` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wishlist`
+-- Estructura para la tabla de la lista de deseos `wishlist`
 --
 
 CREATE TABLE `wishlist` (
@@ -136,93 +136,93 @@ CREATE TABLE `wishlist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indexes for dumped tables
+-- Indices para la informacion generada
 --
 
 --
--- Indexes for table `admins`
+-- Indice para los `admins`
 --
 ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `cart`
+-- Indice para el carrito `cart`
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `messages`
+-- Indice para los `messages`
 --
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `orders`
+-- Indice para los pedidos `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `products`
+-- Indice para los `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indice para los `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `wishlist`
+-- Indice para la lista de deseos `wishlist`
 --
 ALTER TABLE `wishlist`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT para acomodar la informacion generada
 --
 
 --
--- AUTO_INCREMENT for table `admins`
+-- AUTO_INCREMENT para acomodar los `admins`
 --
 ALTER TABLE `admins`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `cart`
+-- AUTO_INCREMENT para acomodar el carrito `cart`
 --
 ALTER TABLE `cart`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `messages`
+-- AUTO_INCREMENT para acomodar los `messages`
 --
 ALTER TABLE `messages`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `orders`
+-- AUTO_INCREMENT para acomodar los pedidos `orders`
 --
 ALTER TABLE `orders`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT para acomodar los`products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT para acomodar los `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wishlist`
+-- AUTO_INCREMENT para acomodar la lista deseos `wishlist`
 --
 ALTER TABLE `wishlist`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;

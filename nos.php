@@ -40,7 +40,7 @@ if(isset($_SESSION['user_id'])){
 
    <div class="content">
       <h3>¿Quíenes somos?</h3>
-      <p>Somos una empresa dedicada al el medio ambiente, comprometidos con nuestros clientes al ofrecer productos biodegradables para que saborees tus deliciosas comidas más ecológicamente </p>
+      <p>PlatOn, somos una empresa dedicada al el medio ambiente, comprometidos con nuestros clientes al ofrecer productos biodegradables para que saborees tus deliciosas comidas más ecológicamente </p>
       <a href="contac.php" class="btn">Conecta con nosotros</a>
    </div>
 </div>

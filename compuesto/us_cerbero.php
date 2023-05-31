@@ -61,7 +61,7 @@
          <?php
             }else{
          ?>
-         <p>Por favor inicia sesión o regístrate primero</p>
+         <p>Inicia sesión o regístrate para realizar compras</p>
          <div class="flex-btn">
             <a href="us_log.php" class="option-btn">Iniciar sesión</a>
             <a href="us_regis.php" class="option-btn">Registrar usuario</a>
