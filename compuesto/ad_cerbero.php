@@ -17,7 +17,6 @@
         <a href = "../admin/dashboard.php" class = "logo">Panel<span>Administador</span></a>
     <!--Navegacion del panel -->
     <nav class="navbar">
-         <a href="../admin/dashboard.php">Inicio</a>
          <a href="../admin/produc.php">Productos</a>
          <a href="../admin/orden.php">Pedidos</a>
          <a href="../admin/ad_cuentas.php">Administradores</a>

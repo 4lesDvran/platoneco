@@ -1,11 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Apr 30, 2022 at 12:51 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -17,15 +10,11 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
 -- Database: `store_db`
---
 
 -- --------------------------------------------------------
 
---
 -- Estructura para la tabla de los `admins`
---
 
 CREATE TABLE `admins` (
   `id` int(100) NOT NULL,
@@ -33,18 +22,13 @@ CREATE TABLE `admins` (
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
 -- Intorducir info en `admins`
---
 
 INSERT INTO `admins` (`id`, `name`, `password`) VALUES
 (1, 'admin', '6216f8a75fd5bb3d5f22b6f9958cdede3fc086c2');
 
--- --------------------------------------------------------
 
---
 -- Estructura para la tabla del carrito `cart`
---
 
 CREATE TABLE `cart` (
   `id` int(100) NOT NULL,
@@ -56,11 +40,7 @@ CREATE TABLE `cart` (
   `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
---
 -- Estructura para la tabla de los `messages`
---
 
 CREATE TABLE `messages` (
   `id` int(100) NOT NULL,
@@ -71,11 +51,7 @@ CREATE TABLE `messages` (
   `message` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
---
 -- Estructura para la tabla de los pedidos `orders`
---
 
 CREATE TABLE `orders` (
   `id` int(100) NOT NULL,
@@ -91,11 +67,7 @@ CREATE TABLE `orders` (
   `payment_status` varchar(20) NOT NULL DEFAULT 'pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
---
 -- Estructura para la tabla de los `products`
---
 
 CREATE TABLE `products` (
   `id` int(100) NOT NULL,
@@ -107,11 +79,8 @@ CREATE TABLE `products` (
   `image_03` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
 
---
 -- Estructura para la tabla de los `users`
---
 
 CREATE TABLE `users` (
   `id` int(100) NOT NULL,
@@ -120,11 +89,7 @@ CREATE TABLE `users` (
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
---
 -- Estructura para la tabla de la lista de deseos `wishlist`
---
 
 CREATE TABLE `wishlist` (
   `id` int(100) NOT NULL,
@@ -135,49 +100,34 @@ CREATE TABLE `wishlist` (
   `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
+-- --------------------------------------------------------------
 -- Indices para la informacion generada
---
 
---
 -- Indice para los `admins`
---
 ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`);
 
---
 -- Indice para el carrito `cart`
---
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`);
 
---
 -- Indice para los `messages`
---
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
 
---
 -- Indice para los pedidos `orders`
---
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
---
 -- Indice para los `products`
---
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
---
 -- Indice para los `users`
---
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
---
 -- Indice para la lista de deseos `wishlist`
---
 ALTER TABLE `wishlist`
   ADD PRIMARY KEY (`id`);
 

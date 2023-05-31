@@ -5,8 +5,8 @@
       <div class="box">
          <h3>Acceso rápido</h3>
          <a href="home.php"> <i class="fas fa-angle-right"></i> Inicio</a>
-         <a href="nos.php"> <i class="fas fa-angle-right"></i> Nosotros</a>
          <a href="shop.php"> <i class="fas fa-angle-right"></i> Tienda</a>
+         <a href="nos.php"> <i class="fas fa-angle-right"></i> Nosotros</a>
          <a href="contac.php"> <i class="fas fa-angle-right"></i> Contáctenos</a>
       </div>
 <!-- Acceso rapido a las opciones de usuario -->

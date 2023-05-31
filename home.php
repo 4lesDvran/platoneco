@@ -77,7 +77,7 @@ include 'compuesto/deseo_carro.php';
 </div>
 <!-- Estructura de como comprar por categorias y tambien se usa el eslide para arrastrar --> 
 <section class="category">
-   <h1 class="heading">Comprar por categorías</h1>
+   <h1 class="heading">Explorar categorías</h1>
    <div class="swiper category-slider">
    <div class="swiper-wrapper">
 
@@ -108,7 +108,7 @@ include 'compuesto/deseo_carro.php';
 <!-- Desplegar los ultimos productos que fueron subidos-->
 <section class="home-products">
 
-   <h1 class="heading">Lo Último</h1>
+   <h1 class="heading">Tendencias</h1>
 
    <div class="swiper products-slider">
    <div class="swiper-wrapper">

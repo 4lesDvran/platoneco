@@ -17,10 +17,9 @@
       <a href="home.php" class="logo">Plat<span>ON.</span></a>
 <!-- Acceso al inicio, acerca de, pedidos, tienda contactenos -->
       <nav class="navbar">
-         <a href="home.php">Inicio</a>
-         <a href="nos.php">Nosotros</a>
-         <a href="pedid.php">Pedidos</a>
          <a href="shop.php">Tienda</a>
+         <a href="pedid.php">Pedidos</a>
+         <a href="nos.php">Nosotros</a>
          <a href="contac.php">Contáctenos</a>
       </nav>
 <!-- Uso de íconos para las herramientas de navegación y conteo de deseos y carro desde DB -->

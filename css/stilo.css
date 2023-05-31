@@ -567,6 +567,12 @@
    background-color: var(--main-color);
 }
 
+/*Se rehusa a ser editado */
+.products .box-container .box .sub-total{
+   font-size: 3rem;
+   color: var(--white);
+}
+
 /* Apariencia del texto de total en la lista de deseos */
 .wishlist-total{
    max-width: 50rem;

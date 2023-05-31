@@ -1,5 +1,5 @@
 <?php
-/*Devolver al susuario si no ha ingresado */
+/*Verificar al susuario si no ha ingresado y recibir la orden de añadir a los deseos */
 if(isset($_POST['add_to_wishlist'])){
    if($user_id == ''){
       header('location:us_log.php');
@@ -31,7 +31,7 @@ if(isset($_POST['add_to_wishlist'])){
       }
    }
 }
-/*Devolver al susuario si no ha ingresado */
+/*Verificar al susuario si no ha ingresado y recibir la orden de añadir al carro*/
 if(isset($_POST['add_to_cart'])){
    if($user_id == ''){
       header('location:us_log.php');
@@ -53,7 +53,7 @@ if(isset($_POST['add_to_cart'])){
 
       if($check_cart_numbers->rowCount() > 0){
          $message[] = 'Ya está en el carro';
-         /*De lo contrario se añade */
+         /*De lo contrario se añade y se elimina de los deseos*/
         }else{
          $check_wishlist_numbers = $conn->prepare("SELECT * FROM `wishlist` WHERE name = ? AND user_id = ?");
          $check_wishlist_numbers->execute([$name, $user_id]);

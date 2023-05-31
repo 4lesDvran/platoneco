@@ -50,7 +50,7 @@ if(isset($_POST['update_qty'])){
     include 'compuesto/us_cerbero.php';
 ?>
 <!-- Carro de compras, botones para eliminar y modificar las compras en curso -->
-<section class="products shopping-cart">
+<section class="products">
 
 <h3 class="heading">Tu Carrito</h3>
 
@@ -74,7 +74,7 @@ if(isset($_POST['update_qty'])){
       <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="<?= $fetch_cart['quantity']; ?>">
       <button type="submit" class="fas fa-edit" name="update_qty"></button>
    </div>
-   <div class="sub-total"> Precio del ítem: <span>$<?= $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</span> </div>
+   <div class="sub-total"> Precio de los ítems: <span>$<?= $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</span> </div>
    <input type="submit" value="Quitar item" onclick="return confirm('¿Quitar del carrito?');" class="delete-btn" name="delete">
 </form>
 <?php
@@ -86,8 +86,8 @@ $grand_total += $sub_total;
    echo '<p class="empty">Tu carro está vacío';
 }
 ?>
-<!-- Los botones de eliminar y proceder no tienen función si no hay articulos -->
 </div>
+<!-- Los botones de eliminar y proceder no tienen función si no hay articulos -->
 <div class="cart-total">
    <p>Total de compras : <span>$<?= $grand_total; ?>/-</span></p>
    <a href="shop.php" class="option-btn">Volver a la tienda</a>

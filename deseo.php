@@ -9,6 +9,8 @@ if(isset($_SESSION['user_id'])){
    $user_id = '';
    header('location:us_log.php');
 };
+/*Incluye la referencia para añadir o quitar articulos del deseos y carro */
+include 'compuesto/deseo_carro.php';
 /* Si el usuario lo solicita elimina articulo de la lista de deseaos */
 if(isset($_POST['delete'])){
    $wishlist_id = $_POST['wishlist_id'];
@@ -62,7 +64,7 @@ if(isset($_GET['delete_all'])){
       <input type="hidden" name="name" value="<?= $fetch_wishlist['name']; ?>">
       <input type="hidden" name="price" value="<?= $fetch_wishlist['price']; ?>">
       <input type="hidden" name="image" value="<?= $fetch_wishlist['image']; ?>">
-   <!-- Esto referencia de manera local las imagenes y el metodo de vista rápida para todos los articulos -->
+   <!-- Esto referencia de manera local las imagenes y el metodo de vista rápida para todos los articulos, ademas del contador de cantidad de items -->
       <a href="vista.php?pid=<?= $fetch_wishlist['pid']; ?>" class="fas fa-eye"></a>
       <img src="subir_img/<?= $fetch_wishlist['image']; ?>" alt="">
       <div class="name"><?= $fetch_wishlist['name']; ?></div>
@@ -70,7 +72,7 @@ if(isset($_GET['delete_all'])){
          <div class="price">$<?= $fetch_wishlist['price']; ?>/-</div>
          <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
       </div>
-      <input type="submit" value="Añadir al carro" class="btn" name="add_to_cart">
+      <input type="submit" value="Añadir al Carro" class="btn" name="add_to_cart">
       <input type="submit" value="Quitar artículo" onclick="return confirm('¿Desea quitar este artículo?');" class="delete-btn" name="delete">
    </form>
 <!-- Lista de deseos vacía --> 
